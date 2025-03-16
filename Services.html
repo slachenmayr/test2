@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lachenmayr Construction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Teko:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+/* Banner */
+.banner {
+    background: #5a5a5a;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 0px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Logo on the left (pops out slightly) */
+.banner .logo {
+    max-width: 300px; /* Adjust size as needed */
+    height: auto;
+    position: relative;
+    z-index: 2; /* Layer above buttons */
+    transform: translateY(10px); /* Makes it pop out */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    left: 10px;
+    Flex-wrap: wrap;
+}
+
+/* Container for image and buttons */
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/* BGB Image - layered over buttons */
+.banner-content .bgb-image {
+    max-width: 130px; /* Similar to button height */
+    height: auto;
+    position: absolute;
+    right: 110px; /* Adjust based on layout */
+    z-index: 1; /* Layer above buttons */
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Buttons */
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: 170px; /* Pushes buttons to the right of BGB image */
+    position: relative;
+    z-index: 1; /* Keeps buttons behind BGB */
+}
+
+.button-container button {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button-container button:hover {
+    background-color: #536ad9;
+    transform: scale(1.05);
+}
+ 
+        /* Hero Section */
+        .hero {
+            background: url('construction-bg.jpg') center/cover;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(248, 248, 248);
+            font-size: 1.5em;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            padding: 20px;
+        }
+
+        body {
+            font-family: 'Teko', sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        /* Services Section */
+        .services {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .services h1 {
+            font-size: 2.8em;
+            color: #2a2a2a;
+            margin-bottom: 15px;
+        }
+
+        .services p {
+            font-size: 1.5em;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        /* Services Grid */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 10px;
+        }
+
+        /* Service Box Styling */
+        .service-box {
+            position: relative;
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Background Image Fade-in Effect */
+        .service-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .service-box:hover::before {
+            opacity: 1;
+        }
+
+        /* Assign Background Images */
+        .service-box.residential::before { background-image: url('26.jpg'); }
+        .service-box.commercial::before { background-image: url('8.jpg'); }
+        .service-box.agriculture::before { background-image: url('27.jpg'); }
+        .service-box.consulting::before { background-image: url('18.jpg'); }
+        .service-box.additional::before { background-image: url('21.jpg'); }
+
+        /* Keep Content Above Background */
+        .service-box > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            Color: white
+        }
+
+        /* Service Headers */
+        .service-box h2, .service-box ul li {
+    color: #2a2a2a;
+}
+
+        /* Service List */
+        .service-box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .service-box ul li {
+            font-size: 1.2em;
+            color: #000000;
+            padding: 5px 0;
+        }
+
+        /* Quote Button */
+        .quote-button {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #d9534f;
+            color: #000000;
+            padding: 15px 30px;
+            font-size: 1.6em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background-color: #b03a32;
+            transform: scale(1.05);
+        }
+
+        
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .footer a {
+            color: #c1c1c1;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+        }
+
+        @media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons */
+        align-items: center; /* Center them */
+        margin-left: 0; /* Reset margin */
+    }
+
+    .button-container button {
+        width: 80%; /* Make them fit the screen */
+        font-size: 1.1em;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="banner">
+        <img src="logo.jpg" alt="Lachenmayr Construction LLC" class="logo">
+        <div class="banner-content">
+            <!--img src="BGB.jpg" alt="Side Image" class="bgb-image"-->
+            <nav class="button-container">
+                <button onclick="window.location.href='BuildwithLachenmayr.html';">Home</button>
+                <button onclick="window.location.href='About-us.html';">About Us</button>
+                <button onclick="window.location.href='gallery.html';">Gallery</button>
+                <button onclick="window.location.href='contact.html';">Contact Us</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Family Owned.</br>American Made.<br>Built Strong.</h1>
+    </div>
+
+    <section class="services">
+        <h1>Our Services</h1>
+        <p>With over 30 years of experience, we provide expert craftsmanship and high-quality service.</p>
+
+        <div class="services-container">
+            <div class="service-box residential">
+                <h2>Residential</h2>
+                <ul>
+                    <li>New Homes</li>
+                    <li>Renovations</li>
+                    <li>Kitchens & Baths</li>
+                    <li>Roofing & Siding</li>
+                    <li>Windows & Doors</li>
+                </ul>
+            </div>
+
+            <div class="service-box commercial">
+                <h2>Commercial</h2>
+                <ul>
+                    <li>Commercial Fit-outs</li>
+                    <li>Renovations & Repairs</li>
+                    <li>Ongoing Maintenance</li>
+                </ul>
+            </div>
+
+            <div class="service-box agriculture">
+                <h2>Farm & Agricultural</h2>
+                <ul>
+                    <li>Barns & Stables</li>
+                    <li>Property Renovations</li>
+                </ul>
+            </div>
+
+            <div class="service-box consulting">
+                <h2>Consulting & Estimating</h2>
+                <ul>
+                    <li>Estimating & Project Management</li>
+                </ul>
+            </div>
+
+            <div class="service-box additional">
+                <h2>Additional Services</h2>
+                <ul>
+                    <li>Custom Renovations & Additions</li>
+                    <li>Property Maintenance & Preservation</li>
+                    <li>Copper Roofs</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="quote-button">
+            <a href="contact.html" class="btn">Request a Free Quote</a>
+        </div>
+    </section>
+            <!-- Footer -->
+    <div class="footer">
+        <p>&copy;Lachenmayr Construction LLC., Established 1992 | <a href="contact.html">Contact Us</a></p>
+    </div>
+
+
+
+</body>
+</html>

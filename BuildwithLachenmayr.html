@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/x-icon" img src="logo.jpg">
+    <title>Lachenmayr Construction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Teko:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Teko', sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+/* Banner */
+
+
+    * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Teko', sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        /* Banner */
+        .banner {
+    background: #5a5a5a;
+    display: flex;
+    align-items: right;
+    justify-content: left;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+/* Logo */
+.banner .logo {
+    max-width: 225px; /* Adjust size as needed */
+    height: auto;
+    transform: translateY(15px);
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Menu Button */
+.menu-button {
+    position: absolute;
+    right: 15px;
+    background: #fff;
+    border: none;
+    top: 20px;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Menu (Hidden by Default) */
+.menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 200px;
+    padding: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    padding: 2px 10px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: #011ca3;
+    color: whitesmoke;
+    transition: 0.3s;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+
+        /* Hero Section */
+            .hero {
+            background: url('construction-bg.jpg') center/cover;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(248, 248, 248);
+            font-size: 1.5em;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            padding: 20px;
+        }
+
+        /* Photo Gallery */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .photo-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            Color: black;
+        }
+
+        .photo-card:hover {
+            transform: scale(1.05);
+            background-color: #c0c0c0;
+            Color:  #001370;
+            transition: 0.3s;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Gallery Animation */
+        .gallery-container {
+            width: 100%;
+            max-width: 1000px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .gallery {
+            display: flex;
+            width: 200%;
+            animation: slide 45s infinite linear;
+        }
+
+        .gallery img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .footer a {
+            color: #c1c1c1;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons */
+        align-items: center; /* Center them */
+        margin-left: 0; /* Reset margin */
+    }
+
+    .button-container button {
+        width: 80%; /* Make them fit the screen */
+        font-size: 1.1em;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+</style>
+</head>
+<body>
+    <header class="banner">
+        <img src="logo.jpg" alt="Lachenmayr Construction LLC" class="logo">
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <nav id="menu" class="menu">
+            <a href="Services.html">Services</a>
+            <a href="About-us.html">About Us</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+
+
+        
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Family Owned.</br>American Made.<br>Built Strong.</h1>
+
+
+    </div>
+
+    <!-- Featured Services -->
+    <h1>Our Featured Services</h1>
+    <div class="photo-gallery">
+        <a href="services.html">
+            <div class="photo-card">
+                <h3>Construction Services</h3>
+                <p>Residential, Commercial, and Farm Development</p>
+            </div>
+        </a>
+        <a href="services.html">
+            <div class="photo-card">
+                <h3>Consulting</h3>
+                <p>Expert Guidance & Project Management</p>
+            </div>
+        </a>
+        <a href="services.html">
+            <div class="photo-card">
+                <h3>Renovations</h3>
+                <p>Transforming Spaces with Quality</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="gallery-container">
+        <div class="gallery">
+            <img src="1.jpg" alt="">
+            <img src="2.jpg" alt="">
+            <img src="3.jpg" alt="">
+            <img src="4.jpg" alt="">
+            <img src="5.jpg" alt="">
+            <img src="6.jpg" alt="">
+            <img src="7.jpg" alt="">
+            <img src="8.jpg" alt="">
+            <img src="9.jpg" alt="">
+        </div>
+    </div>
+
+    <!-- Social Links -->
+    <div class="social-icons">
+        <a href="https://www.yelp.com" target="_blank"><img src="yelp.jpg" alt="Yelp"></a>
+        <a href="https://instagram.com" target="_blank"><img src="facebook.jpg" alt="Instagram"></a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy;Lachenmayr Construction LLC., Established 1992 | <a href="contact.html">Contact Us</a></p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+        </script>
+</body>
+</html>
+

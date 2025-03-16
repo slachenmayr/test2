@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" img src="logo.jpg">
+    <title>Lachenmayr Construction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Teko:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Teko', sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        /* Banner */
+        .banner {
+            background: #6a6a72 url('BGB.jpg') repeat-x center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            height: 25px
+            position: sticky;
+            top: 15px;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .banner img {
+            max-width: 250px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('construction-bg.jpg') center/cover;
+            height: 375px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(248, 248, 248);
+            font-size: 2em;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            padding: 20px;
+        }
+
+        /* Navigation Buttons */
+        .button-container {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background-color:  rgb(196, 190, 255);;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.3em;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #536ad9;
+            transform: scale(1.05);
+        }
+
+        /* Photo Gallery */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .photo-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .photo-card:hover {
+            transform: scale(1.05);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Gallery Animation */
+        .gallery-container {
+            width: 100%;
+            max-width: 1000px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .gallery {
+            display: flex;
+            width: 200%;
+            animation: slide 45s infinite linear;
+        }
+
+        .gallery img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .footer a {
+            color: #c1c1c1;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="banner">
+        <img src="logo.jpg" alt="Lachenmayr Construction LLC">
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Family Owned.</br>American Made.<br>Built Strong.</h1>
+
+
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="button-container">
+        <button onclick="window.location.href='services.html';">Services</button>
+        <button onclick="window.location.href='About-us.html';">About Us</button>
+        <button onclick="window.location.href='FAQ.html';">FAQ</button>
+        <button onclick="window.location.href='contact.html';">Contact Us</button>
+    </div>
+
+    <!-- Featured Services -->
+    <h1>Our Featured Services</h1>
+    <div class="photo-gallery">
+        <a href="services.html">
+            <div class="photo-card">
+                <h3>Construction Services</h3>
+                <p>Residential, Commercial, and Farm Development</p>
+            </div>
+        </a>
+        <a href="consulting.html">
+            <div class="photo-card">
+                <h3>Consulting</h3>
+                <p>Expert Guidance & Project Management</p>
+            </div>
+        </a>
+        <a href="renovations.html">
+            <div class="photo-card">
+                <h3>Renovations</h3>
+                <p>Transforming Spaces with Quality</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="gallery-container">
+        <div class="gallery">
+            <img src="1.jpg" alt="">
+            <img src="2.jpg" alt="">
+            <img src="3.jpg" alt="">
+            <img src="4.jpg" alt="">
+            <img src="5.jpg" alt="">
+            <img src="6.jpg" alt="">
+            <img src="7.jpg" alt="">
+            <img src="8.jpg" alt="">
+            <img src="9.jpg" alt="">
+        </div>
+    </div>
+
+    <!-- Social Links -->
+    <div class="social-icons">
+        <a href="https://www.yelp.com" target="_blank"><img src="yelp.jpg" alt="Yelp"></a>
+        <a href="https://instagram.com" target="_blank"><img src="facebook.jpg" alt="Instagram"></a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy;Lachenmayr Construction LLC., Established 1995 | <a href="contact.html">Contact Us</a></p>
+    </div>
+
+</body>
+</html>
+
